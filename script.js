@@ -26,5 +26,4 @@ button.addEventListener('click', function () {
         tg.MainButton.show();
     }
     isClicked = !isClicked;
-    tg.sendData('Товар добавлен');
 }); 
