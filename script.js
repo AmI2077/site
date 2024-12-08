@@ -2,8 +2,8 @@ let tg = window.Telegram.WebApp;
 tg.expand(); 
 
 tg.MainButton.textColor = "#000000";
-tg.MainButton.color = "#fce000";
-tg.MainButton.setText("Оформить");
+tg.MainButton.color = "#FCE000";
+tg.MainButton.setText("Перейти к оплате");
 
 var button = document.getElementById('button_1'); 
 let isClicked = false;
