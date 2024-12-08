@@ -2,27 +2,44 @@ let tg = window.Telegram.WebApp;
 tg.expand(); 
 
 tg.MainButton.textColor = "#000000";
-tg.MainButton.color = "#FCE000";
-tg.MainButton.setText("Перейти к оплате");
+tg.MainButton.color = "#FAC000";
 
-var button = document.getElementById('button_1'); 
-let isClicked = false;
+var buttons = document.querySelectorAll('.button'); 
+var prices = document.querySelectorAll('.price').textContent;
 
-button.addEventListener('click', function () {
+let totalprice = [];
 
-    if (!isClicked) {
-        button.textContent = 'Добавлено';
-        button.style.backgroundColor = '#14d82e';
-        tg.MainButton.show();
-    }
-    else {
-        button.textContent = '+ Добавить';
-        button.style.backgroundColor = '#eea60a';
-        tg.MainButton.hide();
-    }
-    isClicked = !isClicked;
-}); 
+buttons.forEach(button => {
+    let isClicked = false;
+    button.addEventListener('click', function () {
+        const item = button.closest('.item');
+        const price = item.querySelector('.price').textContent;
+        let int_price = parseInt(price);
 
-Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    tg.sendData("Товар добавлен");
+        if (!isClicked) {
+            totalprice.push(int_price);
+            button.textContent = 'Добавлено';
+            button.style.backgroundColor = '#14d82e';
+            const totalSum = totalprice.reduce((a, b) => a + b, 0);
+            alert(`Цена товара: ${totalSum}`);
+            tg.MainButton.setText("Общая стоимость: ", {totalSum});
+            tg.MainButton.show();
+        }
+        else {
+            const index = totalprice.indexOf(int_price);
+            if (index > -1) {
+                totalprice.splice(index, 1); // Удаляем цену из массива
+            }
+            const totalSum = totalprice.reduce((a, b) => a + b, 0);
+            tg.MainButton.setText("Общая стоимость: ", {totalSum});
+            button.textContent = '+ Добавить';
+            button.style.backgroundColor = '#eea60a';
+        }
+        isClicked = !isClicked;
+    });
 });
+    
+
+tg.MainButton.addEventListener('click', function () {
+    tg.sendData("Товар добавлен");
+}); 
