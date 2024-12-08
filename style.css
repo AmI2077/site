@@ -36,7 +36,13 @@
     width: 90%;
     max-width: 1200px;
   }
-  
+
+  .container {
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Горизонтальное центрирование */
+    padding: 20px; /* Отступ внутри контейнера */
+  }
+
   .menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Два столбца */
