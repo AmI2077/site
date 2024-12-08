@@ -3,6 +3,8 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
+tg.MainButton.setText("Оформить");
+tg.MainButton.show();
 
 var button = document.getElementById('button_1'); 
 let isClicked = false;
@@ -16,14 +18,6 @@ button.addEventListener('click', function () {
     else {
         button.textContent = '+ Добавить';
         button.style.backgroundColor = '#eea60a';
-    }
-    
-    if (tg.MainButton.isVisible) {
-        tg.MainButton.hide();
-    }
-    else {
-        tg.MainButton.setText("Оформить");
-        tg.MainButton.show();
     }
     isClicked = !isClicked;
 }); 
