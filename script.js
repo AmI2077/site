@@ -22,7 +22,7 @@ buttons.forEach(button => {
             button.style.backgroundColor = '#14d82e';
             const totalSum = totalprice.reduce((a, b) => a + b, 0);
             alert(`Цена товара: ${totalSum}`);
-            tg.MainButton.setText("Общая стоимость: ", {totalSum});
+            tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             tg.MainButton.show();
         }
         else {
@@ -31,7 +31,7 @@ buttons.forEach(button => {
                 totalprice.splice(index, 1); // Удаляем цену из массива
             }
             const totalSum = totalprice.reduce((a, b) => a + b, 0);
-            tg.MainButton.setText("Общая стоимость: ", {totalSum});
+            tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             button.textContent = '+ Добавить';
             button.style.backgroundColor = '#eea60a';
         }
