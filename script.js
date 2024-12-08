@@ -1,5 +1,5 @@
 let tg = window.Telegram.WebApp; 
-
+tg.expand()
 
 var button = document.getElementById('button_1')
 let isClicked = false;
