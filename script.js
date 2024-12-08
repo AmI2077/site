@@ -22,7 +22,7 @@ buttons.forEach(button => {
             button.style.backgroundColor = '#14d82e';
             const totalSum = totalprice.reduce((a, b) => a + b, 0);
             alert(`Цена товара: ${totalSum}`);
-            tg.MainButton.setText("Общая стоимость: ", {totalSum});
+            tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             tg.MainButton.show();
         }
         else {
