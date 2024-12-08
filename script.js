@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp; 
 tg.expand(); 
-tg.MainButton.textContent("Главная кнопка");
+
 
 var button = document.getElementById('button_1');
 let isClicked = false;
