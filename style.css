@@ -20,7 +20,7 @@
     color: #eea60a;
     background-color: #000000;
     padding: 20px;
-    width: 100%;
+    width: 1176px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -38,7 +38,7 @@
   }
 
   .container {
-    max-width: 800px; /* Максимальная ширина контейнера */
+    max-width: 1176px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Горизонтальное центрирование */
     padding: 20px; /* Отступ внутри контейнера */
   }
