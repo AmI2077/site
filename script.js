@@ -22,3 +22,7 @@ button.addEventListener('click', function () {
     }
     isClicked = !isClicked;
 }); 
+
+Telegram.WebApp.onEvent("mainButtonClicked", function(){
+    tg.sendData();
+});
