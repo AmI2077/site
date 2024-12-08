@@ -22,13 +22,13 @@ buttons.forEach(button => {
             button.style.backgroundColor = '#14d82e';
             const totalSum = totalprice.reduce((a, b) => a + b, 0);
             alert(`Цена товара: ${totalSum}`);
-            tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
+            tg.MainButton.setText("Общая стоимость: ", {totalSum});
             tg.MainButton.show();
         }
         else {
             const index = totalprice.indexOf(int_price);
             if (index > -1) {
-                totalprice.splice(index, 1); // Удаляем цену из массива
+                totalprice.splice(index, 1); 
             }
             const totalSum = totalprice.reduce((a, b) => a + b, 0);
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
