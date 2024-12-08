@@ -24,5 +24,5 @@ button.addEventListener('click', function () {
 }); 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    tg.sendData();
+    tg.sendData("Товар добавлен");
 });
