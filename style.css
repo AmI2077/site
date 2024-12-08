@@ -20,28 +20,28 @@
     color: #eea60a;
     background-color: #000000;
     padding: 20px;
-    width: 1176px;
+    width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
   }
   
   h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
   
   main {
     display: flex;
     margin: 20px;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1179px;
   }
-
-  .container {
-    max-width: 1176px; /* Максимальная ширина контейнера */
-    margin: 0 auto; /* Горизонтальное центрирование */
-    padding: 20px; /* Отступ внутри контейнера */
-  }
+  
+  /* .container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+  } */
 
   .menu {
     display: grid;
@@ -53,7 +53,7 @@
 
     background-color: #fff; 
     padding: 10px;
-    width: 240px;
+    width: 216px;
     text-align: center; 
     border-radius: 25px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
