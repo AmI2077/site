@@ -40,6 +40,6 @@ buttons.forEach(button => {
 });
     
 
-tg.MainButton.addEventListener('click', function () {
+tg.MainButton.onEvent('mainButtonClicked', function () {
     tg.sendData("Товар добавлен");
 }); 
