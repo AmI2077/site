@@ -41,5 +41,5 @@ buttons.forEach(button => {
     
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () {
-    tg.sendData("Товар добавлен");
+    tg.sendData(JSON.stringify(totalSum));
 }); 
