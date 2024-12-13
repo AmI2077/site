@@ -40,6 +40,6 @@ buttons.forEach(button => {
 });
     
 
-tg.MainButton.onEvent('mainButtonClicked', function () {
+Telegram.WebApp.onEvent('mainButtonClicked', function () {
     tg.sendData("Товар добавлен");
 }); 
