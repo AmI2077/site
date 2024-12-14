@@ -8,6 +8,7 @@ var buttons = document.querySelectorAll('.button');
 var prices = document.querySelectorAll('.price').textContent;
 
 let totalprice = [];
+let totalSum = 0; 
 
 buttons.forEach(button => {
     let isClicked = false;
