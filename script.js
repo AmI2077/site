@@ -46,6 +46,6 @@ buttons.forEach(button => {
 });
     
 Telegram.WebApp.onEvent('mainButtonClicked', function () {
-    const orderDetails = Array.from(order.entries()).map(([title, price]) => `${title}: ${price}`).join(', ');
-    tg.sendData(`Ваш заказ: ${orderDetails}`);
+    const orderDetails = Array.from(order.entries()).map(([title, price]) => `${title}: ${price}`).join('\n');
+    tg.sendData(`Ваш заказ:\n${orderDetails}`);
 }); 
