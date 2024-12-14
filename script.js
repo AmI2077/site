@@ -8,7 +8,7 @@ var buttons = document.querySelectorAll('.button');
 var prices = document.querySelectorAll('.price').textContent;
 
 let totalprice = [];
-let totalSum = 0; 
+var totalSum = 0; 
 
 buttons.forEach(button => {
     let isClicked = false;
@@ -21,8 +21,8 @@ buttons.forEach(button => {
             totalprice.push(int_price);
             button.textContent = 'Добавлено';
             button.style.backgroundColor = '#14d82e';
-            const totalSum = totalprice.reduce((a, b) => a + b, 0);
-            // alert(`Цена товара: ${totalSum}`);
+            totalSum = totalprice.reduce((a, b) => a + b, 0);
+            alert(`Цена товара: ${totalSum}`);
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             tg.MainButton.show();
         }
@@ -31,17 +31,19 @@ buttons.forEach(button => {
             if (index > -1) {
                 totalprice.splice(index, 1); 
             }
-            const totalSum = totalprice.reduce((a, b) => a + b, 0);
+            totalSum = totalprice.reduce((a, b) => a + b, 0);
             tg.MainButton.setText(`Общая стоимость: ${totalSum}`);
             button.textContent = '+ Добавить';
             button.style.backgroundColor = '#eea60a';
         }
         isClicked = !isClicked;
+
+        Telegram.WebApp.onEvent('mainButtonClicked', function () {
+
+            let newTotal = totalSum.toString();
+            tg.sendData(newTotal);
+        }); 
     });
 });
     
 
-Telegram.WebApp.onEvent('mainButtonClicked', function () {
-    let newTotal = totalSum.toString();
-    tg.sendData(newTotal);
-}); 
