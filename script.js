@@ -37,13 +37,11 @@ buttons.forEach(button => {
             button.style.backgroundColor = '#eea60a';
         }
         isClicked = !isClicked;
-
-        Telegram.WebApp.onEvent('mainButtonClicked', function () {
-
-            let newTotal = totalSum.toString();
-            tg.sendData(newTotal);
-        }); 
     });
 });
     
 
+Telegram.WebApp.onEvent('mainButtonClicked', function () {
+
+    tg.sendData(`пожалуйста ${JSON.stringify(totalprice)}`);
+}); 
