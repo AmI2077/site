@@ -45,8 +45,7 @@ buttons.forEach(button => {
     });
 });
     
-
 Telegram.WebApp.onEvent('mainButtonClicked', function () {
-
-    tg.sendData(`Заказ ${JSON.stringify(order)}`);
+    const orderDetails = Array.from(order.entries()).map(([title, price]) => `${title}: ${price}`).join(', ');
+    tg.sendData(`Ваш заказ: ${orderDetails}`);
 }); 
