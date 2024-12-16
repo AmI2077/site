@@ -41,6 +41,10 @@ buttons.forEach(button => {
             button.textContent = '+ Добавить';
             button.style.backgroundColor = '#eea60a';
         }
+
+        if (totalSum == 0) { 
+            tg.MainButton.hide();     
+        }
         isClicked = !isClicked;
     });
 });
