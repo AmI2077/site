@@ -7,6 +7,7 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #202020;
+    /* background-color: var(--tg-theme-bg-color); */
     color: #333;
     display: flex;
     flex-direction: column;
@@ -17,13 +18,19 @@
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
     font-style: normal;
-    color: #eea60a;
+    color: #ee7203;
     background-color: #000000;
-    padding: 20px;
+    /* padding: 20px; */
+    height: 210px;
     width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+  }
+
+  .head_text { 
+    text-align: center;
+    margin-top: 85px;
   }
   
   h1 {
@@ -82,7 +89,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
-    background-color: #eea60a;
+    background-color: #ee7203;
     color: #000000;
     border: none; 
     margin-top: 25px;
@@ -93,6 +100,7 @@
   }
   
   button:hover {
-    background-color: #14d82e;
+    background-color: #274f36;
+    color: #fff;
   }
   
